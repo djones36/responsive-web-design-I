@@ -81,6 +81,8 @@ h1{
 	display: flex;
 	flex-direction: column;
 }
+
+/* Header */
 .navbar{
 	display: flex;
     justify-content: space-between;
@@ -139,6 +141,8 @@ button:hover{
 	padding: 5%;
 }
 
+/* Main body content */
+
 .main .top-content{
 	display:flex;
 	justify-content: space-evenly;
@@ -167,11 +171,7 @@ button:hover{
 	width: 45%
 }
 
-footer p{
-	text-align: center;
-	
-}
-
+/* Footer */
 .contact{
 	display:flex;
 	flex-direction: column;
@@ -180,6 +180,19 @@ address {
 	padding-top: 2%;
 }
 
-.contact address a{
-	padding-top:20px
+/* .contact address a{
+	margin: 20px;
+} */
+
+.contactTel{
+    padding-top:20px;
+}
+
+.contactEml{
+    padding-top:20px;
+}
+
+footer p{
+	text-align: center;
+	
 }
