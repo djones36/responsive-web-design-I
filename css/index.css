@@ -108,7 +108,6 @@ button:hover{
         margin: auto;
         z-index: 1;
         width: 100%;
-        background: red;
     }
 }
 /* Mobile */
@@ -120,15 +119,18 @@ button:hover{
 /* Header */
 /* Tablet  */
 @media(max-width: 800px){
-
-    .navbar{
-        width:95%;
-        flex-wrap: wrap;  
+    header {
+        flex-wrap: wrap;
+    }
+    .navbar a{
+        width:100%; 
+        flex-direction: row;
     }
     .logoImg{
         align-self: center;
         order: -1;
         width:100%;
+        flex-wrap:  wrap;
 
     };
 }
@@ -187,6 +189,10 @@ button:hover{
     .home-child img{
         display: none;  
     };
+
+    .home{
+        justify-content: center;
+    }
     .home .home-child1{
         justify-content: center;
         width: 100%;
