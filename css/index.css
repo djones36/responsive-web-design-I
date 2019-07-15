@@ -119,8 +119,10 @@ button:hover{
 /* Header */
 /* Tablet  */
 @media(max-width: 800px){
-    header {
+    header .logoImg{
         flex-wrap: wrap;
+        justify-content: center;
+        width:100%;
     }
     .navbar a{
         width:100%; 
@@ -131,7 +133,6 @@ button:hover{
         order: -1;
         width:100%;
         flex-wrap:  wrap;
-
     };
 }
 
@@ -147,7 +148,6 @@ button:hover{
     }
     .logoImg{
         justify-content: center;
-        width:100%;
         display:flex;
     }
     .navbar a{
@@ -162,6 +162,10 @@ button:hover{
         justify-content: center;
         
     }
+}
+.logoImg{
+    display: flex;
+    width:100%;
 }
 .navbar{
 	display: flex;

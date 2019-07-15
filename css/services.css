@@ -63,16 +63,30 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 h2{
     font-size: 1.25rem;
 }
+
 .site-wrapper{
     margin: 10px auto 0 auto;
     z-index: 1;
 	width: 880px;
 	display: flex;
 	flex-direction: column;
+}
+/* Tablet */
+@media(max-width: 800px){
+    .site-wrapper{
+        margin: auto;
+        z-index: 1;
+        width: 100%;
+    }
+}
+/* Mobile */
+@media(max-width: 500px){
+    .site-wrapper{
+        width:100%;
+    }
 }
 .navbar{
 	display: flex;
@@ -96,7 +110,12 @@ header{
     border-bottom: 2px solid black;
     margin: 10px 0px;
 }
-
+/* Mobile */
+@media(max-width: 500px){
+    .services{
+        width:100%;
+    }
+}
 .services{
     padding: 20px 0px;
 }
@@ -106,7 +125,19 @@ h1{
 .services-header-img {
     margin: 20px 0px 0px;
 }
-
+/* Mobile */
+@media(max-width: 500px){
+    .content-parent{
+        flex-direction: column;
+        width:100%;
+        flex-wrap:wrap;
+    }
+    .content-parent .child1{
+        flex-direction: column;
+        height:400px;
+        flex-wrap:wrap;
+    }
+}
 .content-parent{
   display: flex;
   flex-direction: row;
