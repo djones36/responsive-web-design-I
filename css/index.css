@@ -102,12 +102,19 @@ button:hover{
     color:white;
     transition-duration: 0.5s;
 }
+/* Tablet */
 @media(max-width: 800px){
     .site-wrapper{
         margin: auto;
         z-index: 1;
         width: 100%;
         background: red;
+    }
+}
+/* Mobile */
+@media(max-width: 500px){
+    .site-wrapper{
+        width:100%;
     }
 }
 /* Header */
@@ -228,6 +235,16 @@ button:hover{
     }
 }
 
+/* Mobile */
+@media(max-width: 500px){
+    .main .top-content{
+        flex-direction: column;
+    };
+    .text-top{
+        width: 100%;
+    }
+}
+
 .main .top-content{
 	display:flex;
 	justify-content: space-evenly;
@@ -239,7 +256,6 @@ button:hover{
 }
 .main .text-top{
 	padding: 10px;
-	width:70%;
 }
 .main .bottom-content{
 	display: flex;
