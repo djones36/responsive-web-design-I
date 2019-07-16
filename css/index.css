@@ -1,3 +1,325 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* General styles */
+
+
+
+h2{
+    font-size: 1.5rem;
+}
+p{
+	font-size: 1.25rem;
+}
+h1{
+    font-size: 5rem;
+}
+.site-wrapper{
+    margin: 10px auto 0 auto;
+    z-index: 1;
+	width: 880px;
+	display: flex;
+	flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    width: 175px;
+    margin-top: 25px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+button:hover{
+    background-color: grey;
+    color:white;
+    transition-duration: 0.5s;
+}
+/* Tablet */
+@media(max-width: 800px){
+    .site-wrapper{
+        margin: auto;
+        z-index: 1;
+        width: 100%;
+    }
+}
+/* Mobile */
+@media(max-width: 500px){
+    .site-wrapper{
+        width:100%;
+    }
+}
+/* Header */
+/* Tablet  */
+@media(max-width: 800px){
+    header .logoImg{
+        flex-wrap: wrap;
+        justify-content: center;
+        width:100%;
+    }
+    .navbar a{
+        width:100%; 
+        flex-direction: row;
+    }
+    .logoImg{
+        align-self: center;
+        order: -1;
+        width:100%;
+        flex-wrap:  wrap;
+    };
+}
+
+/* Mobile */
+@media(max-width: 500px){
+    .header{
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        width: 100%;
+    }
+    .logoImg{
+        justify-content: center;
+        display:flex;
+    }
+    .navbar a{
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        border-bottom: 1px solid gray;
+    }
+    .navbar .logoImg .a{
+        width: 100%;
+        justify-content: center;
+        
+    }
+}
+.logoImg{
+    display: flex;
+    width:100%;
+}
+.navbar{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.15rem;
+    width: 100%;
+}
+.navbar a:hover {
+    color: rgb(176, 177, 178);
+}
+
+.logo{
+    margin-left: 50px;
+}
+
+/* Call to action text */
+
+/* Tablet  */
+@media(max-width: 800px){
+    .home-child img{
+        display: none;  
+    };
+
+    .home{
+        justify-content: center;
+    }
+    .home .home-child1{
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media(max-width: 500px){
+    .home .home-child1{
+        justify-content: center;
+        width:100%;
+    }
+}
+
+.home{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	border-bottom: 2px solid black;
+	margin-bottom: 5%;
+}
+
+.home-child1{
+	width: 40%;
+	margin-top: 5%;
+	padding: 5%;
+	align-content: center;
+	text-align: center;
+	display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+.home-child{
+	width: 40%;
+	margin-top: 5%;
+	padding: 5%;
+}
+
+/* Main Body content */
+
+/* Tablet  */
+@media(max-width: 800px){
+
+    .middle-img{
+        width:100%;
+        margin: 0;  
+    }
+    .main{
+        justify-items: center;
+        width:100%;
+    }
+}
+
+/* Mobile */
+@media(max-width: 500px){
+    .main .top-content{
+        flex-direction: column;
+    };
+    .text-top{
+        width: 100%;
+        padding-top:10%;
+    }
+    .main .bottom-content{
+        flex-direction: column;
+        justify-content: space-between;
+        width:100%;
+    }
+    .text-bottom{
+        padding-top:10%;
+        width: 100%;
+    }
+}
+
+.main .top-content{
+	display:flex;
+	justify-content: space-between;
+}
+.main{
+	margin:0 0 5%;
+	border-bottom: 2px solid black;
+	padding: 20px;
+}
+.main .text-top{
+	padding: 10px;
+}
+.main .bottom-content{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.main .middle-img {
+    display: block;
+    margin: 5% auto;
+}
+
+.text-bottom{
+	padding-right: 20px;
+}
+
+/* Footer */
+
+.contact{
+	display:flex;
+	flex-direction: column;
+}
+address {
+	padding-top: 2%;
+}
+
+address a{
+	text-decoration: none;
+}
+.contactTel{
+    padding-top:20px;
+}
+
+.contactEml{
+    padding-top:20px;
+}
+
+footer p{
+	text-align: center;
+	
+}
 
